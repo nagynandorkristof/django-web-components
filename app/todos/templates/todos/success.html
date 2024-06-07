@@ -1,0 +1,8 @@
+{% extends 'todos/base.html' %}
+
+{% block content %}
+    <h1>You submitted:</h1>
+    <p>Start date: {{ start_date }}</p>
+    <p>End date: {{ end_date_time }}</p>
+    <a hx-boost="true" href="{% url 'index' %}">Go back</a>
+{% endblock content %}

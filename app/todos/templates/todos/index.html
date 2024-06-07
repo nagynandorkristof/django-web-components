@@ -1,0 +1,74 @@
+{% extends 'todos/base.html' %}
+
+{% block content %}
+    <h1 class="text-2xl font-bold p-4">Quasar Alpine Components</h1>
+    <form action="" class="p-4" x-data="{}">
+
+        <h1 class="my-2 text-lg font-bold">Date Input</h1>
+
+        <div x-cloak x-date-input name="start_date">
+            <input type="date" name="start_date">
+        </div>
+        
+        <hr class="my-6">
+
+        <h1 class="my-2 text-lg font-bold">Date Time Input</h1>
+
+        <div x-cloak x-date-time-input>
+            <input type="datetime-local" name="end_date_time">
+        </div>
+
+        <hr class="my-6">
+
+        <h1 class="my-2 text-lg font-bold">Date Range Input</h1>
+
+        <div x-cloak x-date-range-input >
+            <input type="date" name="range_start_date">
+            <input type="date" name="range_end_date">
+        </div>
+
+        <hr class="my-6">
+
+        <h1 class="my-2 text-lg font-bold">Multi Select</h1>
+
+        <div x-cloak x-multi-select>
+            <select name="tags" multiple>
+                <option value="1">Tag 1</option>
+                <option value="2">Tag 2</option>
+                <option value="3">Tag 3</option>
+            </select>
+        </div>
+
+        <hr class="my-6">
+
+        <h1 class="my-2 text-lg font-bold">Button Group</h1>
+
+        <div x-cloak x-button-group>
+            <select name="status">
+                <option value="1">Status 1</option>
+                <option value="2">Status 2</option>
+                <option value="3">Status 3</option>
+            </select>
+        </div>
+
+        <hr class="my-6">
+
+        <h1 class="my-2 text-lg font-bold">Toggle</h1>
+
+        <div x-cloak x-toggle>
+            <input type="checkbox" name="is_active">
+        </div>
+
+        <hr class="my-6">
+
+        <h1 class="my-2 text-lg font-bold">Notification</h1>
+
+        <div x-notify>
+            <button type="button" @click="notify">Send</button>
+        </div>
+
+        <hr class="my-6">
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock content %}
